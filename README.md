@@ -12,6 +12,10 @@
 npm i -S vue2-loading
 ```
 
+## Dependencies
+[font-awesome](https://github.com/FortAwesome/Font-Awesome) 
+for spinner css
+
 ## Usage
 ```vue
 In App.vue
