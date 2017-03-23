@@ -1,5 +1,5 @@
 /*!
- * vue2-loading v0.0.0 
+ * vue2-loading v0.0.9 
  * (c) 2017 vip30
  * Released under the MIT License.
  */
@@ -17,7 +17,6 @@ function plugin (Vue, initOptions) {
         textColor: '#fff'
       };
 	  var options = Object.assign(defaultOption, initOptions);
-	  console.log(options);
       var position = window.getComputedStyle(el).position;
       if (position === 'static' || position === '') {
         el.style.position = 'relative';
@@ -47,20 +46,20 @@ function plugin (Vue, initOptions) {
 	  if (binding.oldValue != binding.value) { // Mutated State
 	    if (binding.value && !isShow) {
 		  isShow = true;
-		  binding.def.showDialog(box);
+		  binding.def.showLoadingBox(box);
 		} else if (isShow) {
 		  isShow = false;
-		  binding.def.hideDialog(box);
+		  binding.def.hideLoadingBox(box);
 		}
 	  }
     },
-    showDialog: function showDialog (box) {
+    showLoadingBox: function showLoadingBox (box) {
 	  box.style.display = 'initial';
       window.requestAnimationFrame(function () {
         box.style.opacity = 1;
       });
     },
-    hideDialog: function hideDialog (box) {
+    hideLoadingBox: function hideLoadingBox (box) {
 	  box.style.display = 'none';
       window.requestAnimationFrame(function () {
         box.style.opacity = 0;
