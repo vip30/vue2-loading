@@ -1,5 +1,5 @@
 # vue2-loading
-
+ 
 
 
 [![npm](https://img.shields.io/npm/v/vue2-loading.svg)](https://www.npmjs.com/package/vue2-loading)
