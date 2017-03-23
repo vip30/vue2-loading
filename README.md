@@ -26,8 +26,8 @@ In App.vue
 
 
 <template>
-    <div v-loading="isLoading (Boolean)"> 
-	</div>
+  <div v-loading="isLoading (Boolean)"> 
+  </div>
 </template>
 ```
 
