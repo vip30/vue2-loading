@@ -21,7 +21,7 @@ function plugin (Vue, initOptions = {}) {
       msg.appendChild(spinner)
       msg.appendChild(textContent)
 	  // Default Css
-      msg.setAttribute('style', 'box-sizing:content-box!important;position:absolute;z-index:1001;margin:0px;padding:035px;height:40px;top:20%;left:50%;text-align:center;font-size:14px;line-height:40px;cursor:wait;background-color:#f4f4f4;border-radius:4px;box-shadow:01px8pxrgba(0,0,0,.15);border:solid1px#bbb;transform:translateX(-50%);')
+      msg.setAttribute('style', 'box-sizing:content-box!important;position:absolute;z-index:1001;margin:0px;padding:035px;height:60px;top:20%;left:50%;text-align:center;font-size:14px;line-height:40px;cursor:wait;background-color:#f4f4f4;border-radius:4px;box-shadow:01px8pxrgba(0,0,0,.15);border:solid1px#bbb;transform:translateX(-50%);')
       msg.style.color = options.textColor
       let box = document.createElement('div')
       // Default Css
