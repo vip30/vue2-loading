@@ -1,5 +1,4 @@
 function plugin (Vue, initOptions = {}) {
-  let isShow = false
   Vue.directive('loading', {
     bind (el, binding, vnode) {
 	  let defaultOption = {
@@ -33,13 +32,12 @@ function plugin (Vue, initOptions = {}) {
 	  el.appendChild(box)
     },  
     update (el, binding, vnode) {
-	  let box = el.getElementsByClassName('vue2-loading-box')[0]
+	  var selector = el.getElementsByClassName('vue2-loading-box')
+	  var box = selector[selector.length - 1]
 	  if (binding.oldValue != binding.value) { // Mutated State
-	    if (binding.value && !isShow) {
-		  isShow = true
+	    if (binding.value) {
 		  binding.def.showLoadingBox(box)
-		} else if (isShow) {
-		  isShow = false
+		} else {
 		  binding.def.hideLoadingBox(box)
 		}
 	  }
