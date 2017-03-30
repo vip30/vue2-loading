@@ -1,5 +1,5 @@
 /*!
- * vue2-loading v0.0.11 
+ * vue2-loading v0.0.14 
  * (c) 2017 vip30
  * Released under the MIT License.
  */
@@ -12,7 +12,6 @@
 function plugin (Vue, initOptions) {
   if ( initOptions === void 0 ) initOptions = {};
 
-  var isShow = false;
   Vue.directive('loading', {
     bind: function bind (el, binding, vnode) {
 	  var defaultOption = {
@@ -46,13 +45,12 @@ function plugin (Vue, initOptions) {
 	  el.appendChild(box);
     },  
     update: function update (el, binding, vnode) {
-	  var box = el.getElementsByClassName('vue2-loading-box')[0];
+	  var selector = el.getElementsByClassName('vue2-loading-box');
+	  var box = selector[selector.length - 1];
 	  if (binding.oldValue != binding.value) { // Mutated State
-	    if (binding.value && !isShow) {
-		  isShow = true;
+	    if (binding.value) {
 		  binding.def.showLoadingBox(box);
-		} else if (isShow) {
-		  isShow = false;
+		} else {
 		  binding.def.hideLoadingBox(box);
 		}
 	  }
@@ -72,7 +70,7 @@ function plugin (Vue, initOptions) {
   });
 }
 
-plugin.version = '0.0.11';
+plugin.version = '0.0.14';
 
 if (typeof window !== 'undefined' && window.Vue) {
   window.Vue.use(plugin);
