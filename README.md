@@ -24,7 +24,8 @@ In App.vue
   Vue.use(VueLoading, {
     text: 'Here I come...',
     bg: 'rgba(230, 233, 236, 0.8)',
-    textColor: '#000'
+    textColor: '#000',
+	spinnerClass: 'fa fa-spin fa-spinner fa-3x'
   })
 </script>
 
@@ -48,6 +49,10 @@ In App.vue
 **textColor:** 
 * loading message text css, 
 * default value: "#fff"
+
+**spinnerClass:** 
+* loading spinner class, 
+* default value: "fa fa-spin fa-spinner fa-3x"
 
 ## :copyright: License
 
