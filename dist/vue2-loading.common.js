@@ -1,5 +1,5 @@
 /*!
- * vue2-loading v0.0.14 
+ * vue2-loading v0.0.15 
  * (c) 2017 vip30
  * Released under the MIT License.
  */
@@ -13,7 +13,8 @@ function plugin (Vue, initOptions) {
 	  var defaultOption = {
         text: 'Loading ...',
         bg: 'rgba(230, 233, 236, 0.8)',
-        textColor: '#fff'
+        textColor: '#fff',
+		spinnerClass: 'fa fa-spin fa-spinner fa-3x'
       };
 	  var options = Object.assign(defaultOption, initOptions);
       var position = window.getComputedStyle(el).position;
@@ -23,7 +24,7 @@ function plugin (Vue, initOptions) {
 	  // Message Box Create
 	  var msg = document.createElement('div');
       var spinner = document.createElement('i');
-	  spinner.className = 'fa fa-spin fa-spinner fa-3x';
+	  spinner.className = options.spinnerClass;
       var textContent = document.createElement('p');
       textContent.textContent = options.text;
       msg.appendChild(spinner);

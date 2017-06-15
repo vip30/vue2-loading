@@ -4,7 +4,8 @@ function plugin (Vue, initOptions = {}) {
 	  let defaultOption = {
         text: 'Loading ...',
         bg: 'rgba(230, 233, 236, 0.8)',
-        textColor: '#fff'
+        textColor: '#fff',
+		spinnerClass: 'fa fa-spin fa-spinner fa-3x'
       }
 	  let options = Object.assign(defaultOption, initOptions)
       let position = window.getComputedStyle(el).position
@@ -14,7 +15,7 @@ function plugin (Vue, initOptions = {}) {
 	  // Message Box Create
 	  let msg = document.createElement('div')
       let spinner = document.createElement('i')
-	  spinner.className = 'fa fa-spin fa-spinner fa-3x'
+	  spinner.className = options.spinnerClass;
       let textContent = document.createElement('p')
       textContent.textContent = options.text
       msg.appendChild(spinner)
