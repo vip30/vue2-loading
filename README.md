@@ -25,7 +25,7 @@ In App.vue
     text: 'Here I come...',
     bg: 'rgba(230, 233, 236, 0.8)',
     textColor: '#000',
-	spinnerClass: 'fa fa-spin fa-spinner fa-3x'
+    spinnerClass: 'fa fa-spin fa-spinner fa-3x'
   })
 </script>
 

@@ -5,7 +5,7 @@ function plugin (Vue, initOptions = {}) {
         text: 'Loading ...',
         bg: 'rgba(230, 233, 236, 0.8)',
         textColor: '#fff',
-		spinnerClass: 'fa fa-spin fa-spinner fa-3x'
+        spinnerClass: 'fa fa-spin fa-spinner fa-3x'
       }
 	  let options = Object.assign(defaultOption, initOptions)
       let position = window.getComputedStyle(el).position
